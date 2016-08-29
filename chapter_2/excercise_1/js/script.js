@@ -1,11 +1,9 @@
 'use strict';
 
 function symbolLogger(symbol) {
-  var word = '';
   return function() {
-    while (word.length < 7) {
-      word = word + symbol;
-      console.log(word);
+    for (var i = symbol; i.length < 8; i += symbol) {
+      console.log(i);
     }
   }
 }
